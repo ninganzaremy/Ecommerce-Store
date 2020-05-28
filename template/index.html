@@ -8,6 +8,8 @@
   <body>
     <div class="grid-container">
       <header class="header">
+        <button type="button" onclick="openMenu()">&#9776;
+        </button>
         <div class="brand">
           <a href="index.html">SuitsPro</a>
         </div>
@@ -16,22 +18,78 @@
           <a href="signin.html">Sign in</a>
         </div>
       </header>
-      <!-- <aside class="header">
-        Shopping Categories
-      </aside> -->
+      <aside class="sidebar">
+      <h3> Shopping Categories</h3>
+      <button class="sidebar-close-button" type="button" name="button" onclick="closeMenu()">X</button>
+      <ul>
+        <a href="index.html">Suits</a>
+        <a href="index.html">Pants</a>
+      </ul>
+      </aside>
       <main class="main">
-        <ul>
-          <li>Product 1</li>
-          <li>Product 2</li>
-          <li>Product 3</li>
-          <li>Product 4</li>
-          <li>Product 5</li>
-        </ul>
+        <div class="content">
+          <ul class="products">
+            <li>
+              <div class="product">
+                <img class="product-image"src="images/product-1.jpg" alt="product">
+                <div class="product-name">
+                  <a href="product.html">Slim Suits</a>
+                </div>
+                <div class="product-brand">Tuxedo</div>
+                <div class="product-price">$250</div>
+                <div class="product-rating">4.6 Stars (20 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image"src="images/product-1.jpg" alt="product">
+                <div class="product-name">
+                  <a href="product.html">Slim Suits</a>
+                </div>
+                <div class="product-brand">Tuxedo</div>
+                <div class="product-price">$250</div>
+                <div class="product-rating">4.6 Stars (20 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image"src="images/product-1.jpg" alt="product">
+                <div class="product-name">
+                  <a href="product.html">Slim Suits</a>
+                </div>
+                <div class="product-brand">Tuxedo</div>
+                <div class="product-price">$250</div>
+                <div class="product-rating">4.6 Stars (20 reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image"src="images/product-1.jpg" alt="product">
+                <div class="product-name">
+                  <a href="product.html">Slim Suits</a>
+                </div>
+                <div class="product-brand">Tuxedo</div>
+                <div class="product-price">$250</div>
+                <div class="product-rating">4.6 Stars (20 reviews)</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
       </main>
       <footer class="footer">
         Remy-2020 All right reserved
       </footer>
 
     </div>
+    <script type="text/javascript">
+    function openMenu(){
+      document.querySelector(".sidebar").classList.add("open");
+    }
+    function closeMenu(){
+      document.querySelector(".sidebar").classList.remove("open");
+    }
+
+    </script>
   </body>
 </html>
