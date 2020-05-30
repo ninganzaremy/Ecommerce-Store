@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { detailsProduct } from "../actions/productActions";
 
-
 function ProductPage(props) {
   const [qty, setQTY] = useState(1);
-  const productDetails = useSelector(state => state.productDetails);
+  const productDetails = useSelector((state) => state.productDetails);
   const { product, loading, error } = productDetails;
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,7 +14,13 @@ function ProductPage(props) {
       //
     };
   }, []);
-  return <div>
+  //adding product to cart
+  const handleAddToCart = () => {
+    props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
+  };
+
+  return (
+    <div>
       <div className="back-to-result">
         <Link to="/">Back to result </Link>
       </div>
@@ -49,21 +54,34 @@ function ProductPage(props) {
           <div className="details-action">
             <ul>
               <li>Price: {product.price}</li>
-              <li>Status: {product.status}</li>
+              <li>
+                Status: {product.countInStock > 0 ? "IN STOCK" : "OUT OF STOCK"}
+              </li>
               <li>
                 QTY:
-                <select value={qty} onChange={(e) => {setQTY(e.target.value)}}>
-                {[...Array(product.countInStock).keys()].map(x=>
-                  <option value={x+1}>{x+1}</option>)}
+                <select
+                  value={qty}
+                  onChange={(e) => {
+                    setQTY(e.target.value);
+                  }}
+                >
+                  {[...Array(product.countInStock).keys()].map((x) => (
+                    <option key={x + 1} value={x + 1}>
+                      {x + 1}
+                    </option>
+                  ))}
                 </select>
               </li>
               <li>
-                <button className="button primary">Add to cart</button>
+                {product.countInStock > 0 && <button className="button primary" onClick={handleAddToCart}>
+                    Add to cart
+                  </button>}
               </li>
             </ul>
           </div>
         </div>
       )}
     </div>
+  );
 }
 export default ProductPage;
