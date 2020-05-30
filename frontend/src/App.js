@@ -2,8 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import ProductPage from "./components/ProductPage";
-import data from './data';
-import { useSelector } from 'react-redux';
+import CartPage from './components/CartPage';
 
 import "./App.css";
 
@@ -32,10 +31,7 @@ function App() {
         </header>
         <aside className="sidebar">
           <h3> Shopping Categories</h3>
-          <button
-            className="sidebar-close-button"
-            onClick={closeMenu}
-          >
+          <button className="sidebar-close-button" onClick={closeMenu}>
             X
           </button>
           <ul className="categories">
@@ -47,6 +43,8 @@ function App() {
         <main className="main">
           <div className="content">
             <Route path="/product/:id" component={ProductPage} />
+            <Route path="/cart/:id?" component={CartPage} />
+
             <Route path="/" exact={true} component={HomePage} />
           </div>
         </main>
