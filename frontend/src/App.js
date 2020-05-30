@@ -1,8 +1,10 @@
 import React from "react";
-import data from "./data";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import ProductPage from "./components/ProductPage";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import data from './data';
+import { useSelector } from 'react-redux';
+
 import "./App.css";
 
 
@@ -32,13 +34,11 @@ function App() {
           <h3> Shopping Categories</h3>
           <button
             className="sidebar-close-button"
-            type="button"
-            name="button"
             onClick={closeMenu}
           >
             X
           </button>
-          <ul>
+          <ul className="categories">
             <a href="index.html">Suits</a>
             <a href="index.html">Shirts</a>
             <a href="index.html">Pants</a>
@@ -46,7 +46,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
-            <Route path="/products/:id" component={ProductPage} />
+            <Route path="/product/:id" component={ProductPage} />
             <Route path="/" exact={true} component={HomePage} />
           </div>
         </main>
