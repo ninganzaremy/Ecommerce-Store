@@ -8,7 +8,7 @@ function ProductPage(props){
   const product = data.products.find((x) => x._id === props.match.params.id);
 
   return <div>
-      <div>
+      <div className="back-to-result">
         <Link to="/">Back to result </Link>
       </div>
       <div className="details">
