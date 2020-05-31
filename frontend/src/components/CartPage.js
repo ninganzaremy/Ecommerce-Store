@@ -25,7 +25,8 @@ function CartPage(props) {
     props.history.push("/signin ?redirect=shipping");
   };
 
-  return <div className="cart">
+  return (
+    <div className="cart">
       <div className="cart-list">
         <ul className="cart-list-container">
           <li>
@@ -35,7 +36,7 @@ function CartPage(props) {
           {cartItems.length == 0 ? (
             <div>Cart is empty</div>
           ) : (
-            cartItems.map(item =>
+            cartItems.map((item) => (
               <li>
                 <div className="cart-image">
                   <img src={item.image} alt="product" />
@@ -69,13 +70,14 @@ function CartPage(props) {
                 </div>
                 <div className="cart-price">${item.price}</div>
               </li>
-            )
+            ))
           )}
         </ul>
       </div>
       <div className="cart-action">
         <h3>
-          Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items) : $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+          Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items) : ${" "}
+          {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
         </h3>
         <button
           onClick={checkoutHandler}
@@ -86,6 +88,7 @@ function CartPage(props) {
         </button>
       </div>
     </div>
+  );
 }
 
 export default CartPage;
