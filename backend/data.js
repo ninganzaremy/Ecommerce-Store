@@ -9,7 +9,7 @@ export default {
       brand: 'Bar III',
       rating: 4.5,
       numReview: 188,
-      countInStock: 30
+      countInStock: 0
     },
     {
       _id: 2,
@@ -20,7 +20,7 @@ export default {
       brand: 'Bar III',
       rating: 4.5,
       numReview: 188,
-      countInStock: 40
+      countInStock: 22
     },
     {
       _id: 3,
@@ -31,7 +31,7 @@ export default {
       brand: 'Banana Republic',
       rating: 4.7,
       numReview: 10,
-      countInStock: 50
+      countInStock: 16
     },
     {
       _id: 4,
@@ -42,7 +42,7 @@ export default {
       brand: 'Tuxedo',
       rating: 4.9,
       numReview: 20,
-      countInStock: 60
+      countInStock: 25
     },
     {
       _id: 5,
@@ -53,7 +53,7 @@ export default {
       brand: 'Coton',
       rating: 4.4,
       numReview: 20,
-      countInStock: 70
+      countInStock: 33
     },
     {
       _id: 6,
@@ -64,7 +64,7 @@ export default {
       brand: 'Coton',
       rating: 4.4,
       numReview: 20,
-      countInStock: 80
+      countInStock: 7
     }
   ]
 };
