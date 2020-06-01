@@ -2,6 +2,9 @@ import {
   USER_SIGNIN_REQUEST,
   USER_SIGNIN_SUCCESS,
   USER_SIGNIN_FAIL,
+  USER_REGISTER_REQUEST,
+  USER_REGISTER_SUCCESS,
+  USER_REGISTER_FAIL,
 } from "../constants/userConstants";
 
 function userSigninReducer(state = {}, action) {
@@ -31,4 +34,4 @@ function userRegisterReducer(state = {}, action) {
       return state;
   }
 }
-export{userSigninReducer}
+export{userSigninReducer, userRegisterReducer}
