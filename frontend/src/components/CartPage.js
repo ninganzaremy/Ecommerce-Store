@@ -33,7 +33,7 @@ function CartPage(props) {
             <h3>Shopping Cart</h3>
             <div>Price</div>
           </li>
-          {cartItems.length == 0 ? (
+          {cartItems.length === 0 ? (
             <div>Cart is empty</div>
           ) : (
             cartItems.map((item) => (
