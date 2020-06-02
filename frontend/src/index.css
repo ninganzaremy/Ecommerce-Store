@@ -33,7 +33,9 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+  height: 5rem;
 }
 .brand a{
   color: #ffffff;
@@ -107,6 +109,7 @@ a:hover{
 .product-rating{
   margin-bottom: 1rem;
 }
+
 /* Sidebar */
 
 .brand button {
@@ -132,15 +135,15 @@ a:hover{
 .sidebar-close-button{
   border-radius: 50%;
   border: .1rem #000000 solid;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: .5rem;
   font-size: 2rem;
   padding-top: 0;
   cursor: pointer;
   position: absolute;
   right: .5rem;
-  top: 1.5rem
+  top: 1.5rem;
 }
 
 /* Product Details */
@@ -174,6 +177,7 @@ a:hover{
 }
 .back-to-result {
   padding: 1rem;
+  margin-top: 3rem;
 }
 .details-action{
   border: .1rem #808080 solid;
@@ -205,6 +209,21 @@ a:hover{
   text-align: center;
 }
 /* Cart */
+.badge {
+  display: inline-block;
+  position: absolute;
+  width: 1rem;
+  padding: .3rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  text-align: center;
+  background: #ff4400;
+  color: #fefefe;
+  height: 1rem;
+  margin-left: -2px;
+  top: 5px;
+  line-height: 1rem;
+}
 
 .cart{
   display: flex;
@@ -294,7 +313,9 @@ input{
   align-items: flex-start;
 
 }
-
+.content{
+  margin-top: 4rem;
+}
 .content-margined{
   margin: 1rem;
 }
@@ -403,7 +424,7 @@ tbody>tr:nth-child(odd){
   z-index: 1;
   background-color: #203040;
   margin:0;
-  margin-top:0.4rem;
+  margin-top:1rem;
 }
 .dropdown:hover .dropdown-content{
   display: block;
