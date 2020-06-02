@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { register } from '../actions/userActions';
 
-function RegisterPage(props) {
+function RegisterScreen(props) {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -66,7 +66,7 @@ function RegisterPage(props) {
         </li>
         <li>
           Already have an account?
-          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Login your SuitsPro account</Link>
+          <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center" >Create your ShopPro account</Link>
 
         </li>
 
@@ -74,4 +74,4 @@ function RegisterPage(props) {
     </form>
   </div>
 }
-export default RegisterPage;
+export default RegisterScreen;
