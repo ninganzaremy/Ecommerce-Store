@@ -47,7 +47,7 @@ function CartPage(props) {
           </li>
           {cartItems.length === 0 && (
             <div>
-              Cart is empty <Link to="/">Go shopping</Link>{" "}
+              Cart is empty <Link to="/" className="button">Go shopping   <i className="far fa-forward"></i> </Link>{" "}
             </div>
           )}
           {cartItems.map((item) => (
