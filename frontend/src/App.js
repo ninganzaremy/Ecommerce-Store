@@ -102,7 +102,7 @@ function App() {
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
                 <a href="#">
-                  Admin <i className="fas fa-chevron-down"></i>
+                  Admin<i className="fas fa-chevron-down"></i>
                 </a>
                 <ul className="dropdown-content">
                   <li>
