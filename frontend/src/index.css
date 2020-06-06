@@ -97,7 +97,7 @@ button {
 .description .color1 {
   color: #febd69;
 }
-@media (max-width: 730px) {
+@media only screen and  (max-width: 770px) {
   .description .title {
     font-size: 1px;
     visibility: hidden;
@@ -105,6 +105,7 @@ button {
   .name {
     visibility: hidden;
   }
+  .fas,
   .fal,
   .fad,
   .fa-chevron-down {
@@ -118,11 +119,37 @@ button {
     margin-left: -8rem;
   }
 }
+@media only screen and (max-width: 600px) {
+  .dropdown .fa-chevron-down{
+    font-size: 1rem;
+  }
+  .fal{
+    font-size: 1rem;
+  }
+    .fal,
+    .fad {
+      color: white;
+      font-size: 3rem;
+      margin-left: -1.8rem;
+  }
+.dropbtn .fa-chevron-down {
+    margin-left: -10rem;
+    font-size: 3rem;
+ }
+ .categories-content{
+   margin-left: -10rem;
+   font-size: 0.5rem;
+ }
+}
+
+
 .fal,
 .fad {
   color: white;
   font-size: 3rem;
+  
 }
+
 
 .fal:hover{
   color: #ff8000;
@@ -136,6 +163,14 @@ button {
 .fa-chevron-down {
   margin-left: 1rem;
   font-size: 3rem;
+}
+.fa-cart-plus{
+  color: black;
+  font-size: 3rem;
+
+  padding: 0em 0.2em 0em 0.2em;
+  position: relative;
+  right:28%;
 }
 .main {
   grid-area: main;
@@ -303,8 +338,12 @@ a:hover {
   margin-bottom: 1rem;
 }
 .back-to-result {
-  padding: 1rem;
   margin-top: 3rem;
+
+  padding: 1rem;
+  color: #fff;
+  max-width: 12rem;
+  margin-left: 1.7%;
 }
 .details-action {
   border: 0.1rem #808080 solid;
