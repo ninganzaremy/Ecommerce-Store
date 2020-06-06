@@ -50,8 +50,8 @@ function ProductPage(props) {
     <ErrorBox message={error} />
   ) : (
     <div>
-      <div className="back-to-result">
-        <Link to="/">Back to result</Link>
+      <div className="back-to-result button">
+        <Link to="/"> <i className="far fa-backward"></i>  Back to result</Link>
       </div>
       <div className="details">
         <div className="details-image">
@@ -102,7 +102,7 @@ function ProductPage(props) {
             {product.countInStock > 0 && (
               <li>
                 <button onClick={handleAddToCart} className="button primary">
-                  Add to Cart
+                <i className="fal fa-cart-plus"></i>  Add to Cart
                 </button>
               </li>
             )}
