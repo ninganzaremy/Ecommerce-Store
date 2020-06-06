@@ -58,14 +58,14 @@ function OrderPage(props) {
     <ErrorBox message={error} />
   ) : (
     <div>
-      <div className="back-to-result">
-        <Link to={redirect}> ‹ Back to list</Link>
+      <div className="back-to-result button">
+        <Link to={redirect}> <i className="far fa-backward"></i> Back to list</Link>
         <br />
-        <h3>Order-id: {order._id}</h3>
       </div>
 
       <div className="placeorder">
         <div className="placeorder-info">
+        <h3>Order-id: {order._id}</h3>
           <div>
             <h3>Shipping Address:</h3>
             <div>
